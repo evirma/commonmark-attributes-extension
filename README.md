@@ -9,7 +9,7 @@ Installation
 
 This project can be installed via Composer:
 
-    composer require evirma/commonmark-attributes-extension
+    composer require evirma/commonmark-ext-attributes
     
 Usage
 -----
