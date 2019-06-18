@@ -19,7 +19,7 @@
     "require": {
         "php": "^7.1",
         "ext-mbstring": "*",
-        "league/commonmark": "^1.0.0-beta4",
+        "league/commonmark": "^1.0.0-beta4"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.3|^5.0",
