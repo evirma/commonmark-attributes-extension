@@ -1,0 +1,35 @@
+{
+    "name": "evirma/commonmark-attributes-extension",
+    "type": "commonmark-extension",
+    "description": "The Attributes extension adds a syntax to define HTML-attributes on the various block and inline elements in League CommonMark PHP implementation.",
+    "keywords": ["markdown","attributes","commonmark","php"],
+    "homepage": "https://github.com/evirma/commonmark-attributes-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eugene Myazin",
+            "email": "eugene.myazin@gmail.com"
+        },
+        {
+            "name": "Martin Hasoň",
+            "email": "martin.hason@gmail.com",
+        }
+
+    ],
+    "require": {
+        "php": "^7.1",
+        "phpunit/phpunit": "^4.3|^5.0",
+        "ext-mbstring": "*",
+        "league/commonmark": "^1.0.0-beta4",
+        "friendsofphp/php-cs-fixer": "^2.15"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^2.8|^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Evirma\\CommonMark\\": "src",
+            "Evirma\\CommonMark\\Tests\\": "tests"
+        }
+    }
+}

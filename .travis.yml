@@ -1,0 +1,28 @@
+language: php
+
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+php:
+  - 7.1
+  - 7.2
+  - 7.3
+  - hhvm
+
+env:
+  - COMMONMARK_VERSION=0.19.*
+  - COMMONMARK_VERSION=1.0.0-beta4
+
+before_script:
+  - if [ $TRAVIS_PHP_VERSION = '7.3' ]; then PHPUNIT_COVERAGE="--coverage-clover=coverage.clover"; fi
+  - composer self-update
+  - composer require "league/commonmark:${COMMONMARK_VERSION}" --prefer-dist --no-interaction $COMPOSER_FLAGS
+
+script:
+  - vendor/bin/phpunit $PHPUNIT_COVERAGE
+
+after_script:
+  - if [[ "$PHPUNIT_COVERAGE" != "" ]]; then wget https://scrutinizer-ci.com/ocular.phar && php ocular.phar code-coverage:upload --format=php-clover coverage.clover; fi
