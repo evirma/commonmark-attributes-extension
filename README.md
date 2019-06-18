@@ -2,7 +2,7 @@ League CommonMark Attributes Extension
 ======================================
 
 The Attributes extension adds a syntax to define HTML-attributes on the various block and inline elements in League CommonMark PHP implementation.
-Martin Hasoň wrote extension for commonmark v0.18 and lower, it was fully rebuild for v0.19. Be aware that priority of applying css classes was changed.
+Martin Hasoň wrote extension for commonmark v0.18 and lower, it was fully rebuild for v1.0. Be aware that priority of applying css classes was changed.
 
 Installation
 ------------
